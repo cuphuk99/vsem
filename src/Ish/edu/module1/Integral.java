@@ -20,12 +20,13 @@ public class Integral {
                 height = 0.1 * cut;
             }
                 double currentArea = height * step;
-                area = area + currentArea;
+                area += currentArea;
         }
         return area;
     }
 
     public static void main(String[] args) {
+        // last number of my student ID is 5
         System.out.println("The area is " + getIntegral(0, Math.PI, 1000, 5));
     }
 }
