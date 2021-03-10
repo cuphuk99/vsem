@@ -17,29 +17,15 @@ public class Harry {
     public static void main(String[] args) throws IOException {
 
         String text = new String(Files.readAllBytes(Paths.get("D:\\BestBrain\\Java kurs\\harry.txt")));
-        //System.out.println(text.substring(0, 100));
         text = text.replaceAll("[^A-Za-z ']", "");
-
         String[] words = text.split(" +");
-        /*for (int i = 0; i < 100; i++) {
-            System.out.println(words[i]);
-        }*/
-        int counter = 0;
-        for (int i = 0; i <words.length ; i++) {
-            if(words[i].length() == 12){
-                counter++;
-            }
-        }
-        //System.out.println(counter);
         String stringOfDistinct = "";
         for (int i = 0; i < words.length; i++) {
             if (!stringOfDistinct.contains(words[i])){
                 stringOfDistinct += words[i]+ " ";
             }
-
         }
         String[] distincts  = stringOfDistinct.split(" ");
-        System.out.println(distincts.length);
         Arrays.sort(distincts);
         for (int i = 0; i < words.length; i++) {
             System.out.println(distincts[i]);
