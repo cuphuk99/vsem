@@ -1,5 +1,5 @@
 package Ish.edu.module1;
-/*
+/**
   @author   Ishtukin Vlad
   @project   vsem
   @class  Palindrome
@@ -26,48 +26,51 @@ public class Palindrome {
     }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-    // build  a reverse string
+    // use StringBuilder
     public static boolean isPalindrome2(String text) {
-        boolean result = true;
+
         text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); //remove garbage
         text = text.toLowerCase();
 
         StringBuilder builder = new StringBuilder(text);
         String reversed = builder.reverse().toString();
+        
+       /* boolean result = true;
         if (text.equals(reversed)){
 
         } else {
             result = false;
-        }
+        }*/
 
-        return result;
+        return (reversed.equals(text));
     }
     /////////////////////////////////////////////////////////////////////////////////////
 
-    // use StringBuilder
+    // build  a reverse string
     public static boolean isPalindrome3(String text) {
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); //remove garbage
-        text = text.toLowerCase();
-        boolean result = true;
-
-
-
-        return result;
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", "").toLowerCase(); //remove garbage and to lower case
+        String reversed = "";
+        for (int i = text.length()-1; i >= 0 ; i--) {
+            reversed += text.charAt(i);
+        }
+        return (reversed.equals(text));
     }
 
     /////////////////////////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
-        String text = "А роза упала на лапу Азора";
+        String text1 = "А роза упала на лапу Азора";
+        String text2 = "Я несу гусеня";
+        String text3 = "Иди, иди";
 
         System.out.println(" The first way");
-        System.out.println(   text + " is a palindrom   - " + isPalindrome1(text));
+        System.out.println(   text1 + " is a palindrom   - " + isPalindrome1(text1));
 
         System.out.println(" The second way");
-        System.out.println(   text + " is a palindrom   - " + isPalindrome2(text));
+        System.out.println(   text2 + " is a palindrom   - " + isPalindrome2(text2));
 
         System.out.println(" The third way");
-        System.out.println(   text + " is a palindrom   - " + isPalindrome1(text));
+        System.out.println(   text3 + " is a palindrom   - " + isPalindrome3(text3));
 
     }
 }

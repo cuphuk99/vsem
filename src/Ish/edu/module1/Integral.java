@@ -1,5 +1,5 @@
 package Ish.edu.module1; 
-/*
+/**
   @author   Ishtukin Vlad
   @project   vsem
   @class  Integral
