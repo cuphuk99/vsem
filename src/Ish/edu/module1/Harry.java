@@ -20,6 +20,7 @@ public class Harry {
         text = text.replaceAll("[^A-Za-z ']", "");
         String[] words = text.split(" +");
         String stringOfDistinct = "";
+        String longestWord = "";
         for (int i = 0; i < words.length; i++) {
             if (!stringOfDistinct.contains(words[i])){
                 stringOfDistinct += words[i]+ " ";
