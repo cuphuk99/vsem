@@ -78,7 +78,7 @@ public class Lab1 {
         System.out.println(longestWord + " is the longest word of all text");
         System.out.println(" ");
         System.out.println(counterOfHarry + " is the count of lines that contains 'Harry' word");
-
+        System.out.println(wordsC.length);
 
     }
 }
