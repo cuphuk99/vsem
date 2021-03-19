@@ -1,4 +1,4 @@
-package Ish.edu.module2.class_design.inh;
+package Ish.edu.module2.class_design.inheritance;
 
 import Ish.edu.module2.class_design.Rectangle;
 

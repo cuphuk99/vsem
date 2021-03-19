@@ -1,9 +1,7 @@
 package Ish.edu.module2.class_design;
 
-import Ish.edu.module2.class_design.inh.Garden;
-import Ish.edu.module2.class_design.inh.Person;
-import Ish.edu.module2.class_design.inh.Student;
-import Ish.edu.module2.class_design.inh.Wall;
+import Ish.edu.module2.class_design.inheritance.Garden;
+import Ish.edu.module2.class_design.inheritance.Student;
 
 /**
  * @author Ishtukin Vlad
