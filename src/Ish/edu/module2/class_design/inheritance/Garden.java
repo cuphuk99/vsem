@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Garden extends Rectangle {
     private String typeOfPlant; // contains a type of a veg or a fruit on the garden
     private int leasePeriod; // the number of months for leasing
-    private int priceForMeter; // price in $
+    private int priceForMeter; // price tax in dollars for the calculation of whole price
 
     public Garden(){
     }
