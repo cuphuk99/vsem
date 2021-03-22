@@ -1,6 +1,8 @@
 package Ish.edu.module2.class_design.inheritance;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Objects;
+import java.time.LocalDate;
 
 /**
  * @author Ishtukin Vlad
@@ -14,6 +16,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private String patronymic;
+    private LocalDate dateOfBirth;
     private int age;
     private String male;
     private double weight;
@@ -28,11 +31,11 @@ public class Person {
     public Person() {
     }
 
-    public Person(String firstName, String lastName, String patronymic, int age, String male, double weight, double height, String nationality, String eyesColour, String skinColour, String hairColour, String email, String phoneNumber) {
+    public Person(String firstName, String lastName, String patronymic, LocalDate dateOfBirth, String male, double weight, double height, String nationality, String eyesColour, String skinColour, String hairColour, String email, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.patronymic = patronymic;
-        this.age = age;
+        this.dateOfBirth = dateOfBirth;
         this.male = male;
         this.weight = weight;
         this.height = height;
@@ -70,6 +73,14 @@ public class Person {
 
     public int getAge() {
         return age;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public void setAge(int age) {
@@ -153,12 +164,12 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return getAge() == person.getAge() && Double.compare(person.getWeight(), getWeight()) == 0 && Double.compare(person.getHeight(), getHeight()) == 0 && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getPatronymic(), person.getPatronymic()) && Objects.equals(getMale(), person.getMale()) && Objects.equals(getNationality(), person.getNationality()) && Objects.equals(getEyesColour(), person.getEyesColour()) && Objects.equals(getSkinColour(), person.getSkinColour()) && Objects.equals(getHairColour(), person.getHairColour()) && Objects.equals(getEmail(), person.getEmail()) && Objects.equals(getPhoneNumber(), person.getPhoneNumber());
+        return getDateOfBirth() == person.getDateOfBirth() && Double.compare(person.getWeight(), getWeight()) == 0 && Double.compare(person.getHeight(), getHeight()) == 0 && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getPatronymic(), person.getPatronymic()) && Objects.equals(getMale(), person.getMale()) && Objects.equals(getNationality(), person.getNationality()) && Objects.equals(getEyesColour(), person.getEyesColour()) && Objects.equals(getSkinColour(), person.getSkinColour()) && Objects.equals(getHairColour(), person.getHairColour()) && Objects.equals(getEmail(), person.getEmail()) && Objects.equals(getPhoneNumber(), person.getPhoneNumber());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getFirstName(), getLastName(), getPatronymic(), getAge(), getMale(), getWeight(), getHeight(), getNationality(), getEyesColour(), getSkinColour(), getHairColour(), getEmail(), getPhoneNumber());
+        return Objects.hash(getFirstName(), getLastName(), getPatronymic(), getDateOfBirth(), getMale(), getWeight(), getHeight(), getNationality(), getEyesColour(), getSkinColour(), getHairColour(), getEmail(), getPhoneNumber());
     }
 
     @Override
@@ -167,7 +178,7 @@ public class Person {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", patronymic='" + patronymic + '\'' +
-                ", age=" + age +
+                ", age=" + this.getAgeNew() +
                 ", male='" + male + '\'' +
                 ", weight=" + weight +
                 ", height=" + height +
@@ -178,5 +189,19 @@ public class Person {
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
+    }
+
+    public int getAgeNew(){
+        int years = (int) ChronoUnit.YEARS.between(this.getDateOfBirth(), LocalDate.now());
+        return years;
+    }
+    public boolean isAdult(){
+        boolean result = true;
+        if (this.getAgeNew()>=18){
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
     }
 }

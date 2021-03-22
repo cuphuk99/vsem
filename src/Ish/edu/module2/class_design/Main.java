@@ -3,6 +3,9 @@ package Ish.edu.module2.class_design;
 import Ish.edu.module2.class_design.inheritance.Garden;
 import Ish.edu.module2.class_design.inheritance.Student;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 /**
  * @author Ishtukin Vlad
  * @version 1.0.0
@@ -29,10 +32,12 @@ public class Main {
         System.out.println(" ");
 
 
-        Student s1 = new Student("Vlad", "Ishtukin", "Valeriyovich", 21, "Male", 72.2, 176.3,
+        Student s1 = new Student("Vlad", "Ishtukin", "Valeriyovich", LocalDate.of(1999, Month.AUGUST, 26), "Male", 72.2, 176.3,
                 "Ukrainian", "Green", "White", "Brown", "cuphuk99@gmail.com", "0501512613",
                 "KNUTE", "FIT", "Economic cybernetics", "Digital economy", "1m", "1", 542345, 2020,
                 "None", "Badmintone", 90.1, true);
+
+        System.out.println("The fact that the student is adult is " + s1.isAdult());
         s1.toConsole();
 
     }

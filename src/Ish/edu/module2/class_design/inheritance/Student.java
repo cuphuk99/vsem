@@ -1,6 +1,7 @@
 package Ish.edu.module2.class_design.inheritance;
 
 import java.util.Objects;
+import java.time.LocalDate;
 
 /**
  * @author Ishtukin Vlad
@@ -42,8 +43,8 @@ public class Student extends Person{
         this.livesInDorm = livesInDorm;
     }
 
-    public Student(String firstName, String lastName, String patronymic, int age, String male, double weight, double height, String nationality, String eyesColour, String skinColour, String hairColour, String email, String phoneNumber, String university, String faculty, String chair, String speciality, String group, String course, int id, int yearOfEntering, String club, String sportSection, double averageMark, boolean livesInDorm) {
-        super(firstName, lastName, patronymic, age, male, weight, height, nationality, eyesColour, skinColour, hairColour, email, phoneNumber);
+    public Student(String firstName, String lastName, String patronymic, LocalDate dateOfBirth, String male, double weight, double height, String nationality, String eyesColour, String skinColour, String hairColour, String email, String phoneNumber, String university, String faculty, String chair, String speciality, String group, String course, int id, int yearOfEntering, String club, String sportSection, double averageMark, boolean livesInDorm) {
+        super(firstName, lastName, patronymic, dateOfBirth, male, weight, height, nationality, eyesColour, skinColour, hairColour, email, phoneNumber);
         this.university = university;
         this.faculty = faculty;
         this.chair = chair;
