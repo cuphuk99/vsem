@@ -17,7 +17,6 @@ public class Person {
     private String lastName;
     private String patronymic;
     private LocalDate dateOfBirth;
-    private int age;
     private String male;
     private double weight;
     private double height;
@@ -59,6 +58,7 @@ public class Person {
         return lastName;
     }
 
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -71,10 +71,6 @@ public class Person {
         this.patronymic = patronymic;
     }
 
-    public int getAge() {
-        return age;
-    }
-
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
@@ -83,9 +79,6 @@ public class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public String getMale() {
         return male;
