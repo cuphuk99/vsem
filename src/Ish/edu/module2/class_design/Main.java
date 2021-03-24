@@ -2,6 +2,8 @@ package Ish.edu.module2.class_design;
 
 import Ish.edu.module2.class_design.inheritance.Garden;
 import Ish.edu.module2.class_design.inheritance.Student;
+import Ish.edu.module2.class_design.polymorphism.Factory.Rectangle3;
+import Ish.edu.module2.class_design.polymorphism.Factory.RectangleFactory;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -39,6 +41,11 @@ public class Main {
 
         System.out.println("The fact that the student is adult is " + s1.isAdult());
         s1.toConsole();
+
+        System.out.println("--------------------------------------");
+
+        Parallelogram2 p2 = ParallelogramFactory.create(3,4,45);
+        System.out.println(p2);
 
     }
 }

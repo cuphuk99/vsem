@@ -1,6 +1,7 @@
 package Ish.edu.module2.class_design.polymorphism;
 
 import Ish.edu.module2.class_design.Parallelogram;
+import Ish.edu.module2.class_design.inheritance.SoftwareDesigner;
 
 /**
  * @author Ishtukin Vlad
@@ -23,5 +24,8 @@ public class Main {
 
         ParallelogramNew p2 = new ParallelogramNew(9,7, 60);
         System.out.println(p2.toJSON());
+        System.out.println(p2.toXML());
+
+
     }
 }

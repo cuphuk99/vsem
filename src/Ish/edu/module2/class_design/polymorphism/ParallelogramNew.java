@@ -100,7 +100,8 @@ public class ParallelogramNew implements IGeometry, IPacking {
     @Override
     public String toJSON() {
         String json = "Parallelogram" + "{" + "\"" + "sideA" +"\"" + ":" + this.getSideA() + "," +
-                "\"" + "sideA" +"\"" + ":" + this.getSideA() +
+                "\"" + "sideB" +"\"" + ":" + this.getSideB() + "," +
+                "\"" + "angle" +"\"" + ":" + this.getAngle() +
                 "}";
         return json;
     }
