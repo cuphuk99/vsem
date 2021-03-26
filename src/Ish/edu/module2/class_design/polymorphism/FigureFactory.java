@@ -18,7 +18,9 @@ public class FigureFactory {
     }
 
     public static IGeometry create(double length, double width, double angle){
-
+        if (angle == 0 || angle>357){
+            return null;
+        }
         return new ParallelogramNew(length, width, angle);
     }
 }

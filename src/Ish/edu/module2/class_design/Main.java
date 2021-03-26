@@ -31,8 +31,11 @@ public class Main {
 
         Garden g1 = new Garden(10,15,"Potato",3,10);
         System.out.println("Here is the final price of a leasing " + g1.getPrice());
-        System.out.println(" ");
+        System.out.println("-----------------------------------------");
 
+        Parallelogram2 p2 = ParallelogramFactory.create(3,4,45);
+        System.out.println(p2);
+        System.out.println("--------------------------------------");
 
         Student s1 = new Student("Vlad", "Ishtukin", "Valeriyovich", LocalDate.of(1999, Month.AUGUST, 26), "Male", 72.2, 176.3,
                 "Ukrainian", "Green", "White", "Brown", "cuphuk99@gmail.com", "0501512613",
@@ -44,8 +47,15 @@ public class Main {
 
         System.out.println("--------------------------------------");
 
-        Parallelogram2 p2 = ParallelogramFactory.create(3,4,45);
-        System.out.println(p2);
+        Student st2 = new Student.Builder().setFirstName("Vladislav")
+                .setLastName("Ishtukin")
+                .setPatronymic("Valeriyovich")
+                .setDateOfBirth(LocalDate.of(1999, Month.AUGUST, 26))
+
+                .build();
+
+
+
 
     }
 }

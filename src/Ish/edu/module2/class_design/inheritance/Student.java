@@ -190,4 +190,171 @@ public class Student extends Person{
         System.out.println(super.toString());
         System.out.println(this.toString());
     }
+
+    public static class Builder{
+        private Student studentToBuild;
+
+        public Builder() {
+            this.studentToBuild = new Student();
+        }
+
+        public Builder setSimilarTo(Student student){
+            this.studentToBuild.setFirstName(student.getFirstName());
+            this.studentToBuild.setLastName(student.getLastName());
+            this.studentToBuild.setPatronymic(student.getPatronymic());
+            this.studentToBuild.setDateOfBirth(student.getDateOfBirth());
+            this.studentToBuild.setMale(student.getMale());
+            this.studentToBuild.setWeight(student.getWeight());
+            this.studentToBuild.setHeight(student.getHeight());
+            this.studentToBuild.setNationality(student.getNationality());
+            this.studentToBuild.setEyesColour(student.getEyesColour());
+            this.studentToBuild.setHairColour(student.getHairColour());
+            this.studentToBuild.setEmail(student.getEmail());
+            this.studentToBuild.setPhoneNumber(student.getPhoneNumber());
+
+            this.studentToBuild.university = student.university;
+            this.studentToBuild.faculty = student.faculty;
+            this.studentToBuild.chair = student.chair;
+            this.studentToBuild.speciality = student.speciality;
+            this.studentToBuild.group = student.group;
+            this.studentToBuild.course = student.course;
+            this.studentToBuild.id = student.id;
+            this.studentToBuild.yearOfEntering = student.yearOfEntering;
+            this.studentToBuild.club = student.club;
+            this.studentToBuild.sportSection = student.sportSection;
+            this.studentToBuild.averageMark = student.averageMark;
+            this.studentToBuild.livesInDorm = student.livesInDorm;
+
+
+            return this;
+        }
+
+        public Builder setFirstName(String firstName){
+            studentToBuild.setFirstName(firstName);
+            return this;
+        }
+
+        public Builder setLastName(String lastName){
+            studentToBuild.setLastName(lastName);
+            return this;
+        }
+
+        public Builder setPatronymic(String patronymic){
+            studentToBuild.setPatronymic(patronymic);
+            return this;
+        }
+
+        public Builder setDateOfBirth(LocalDate dateOfBirth){
+            studentToBuild.setDateOfBirth(dateOfBirth);
+            return this;
+        }
+
+        public Builder setMale(String male){
+            studentToBuild.setMale(male);
+            return this;
+        }
+
+        public Builder setWeight(double weight){
+            studentToBuild.setWeight(weight);
+            return this;
+        }
+
+        public Builder setHeight(double height){
+            studentToBuild.setHeight(height);
+            return this;
+        }
+
+        public Builder setNationality(String nationality){
+            studentToBuild.setNationality(nationality);
+            return this;
+        }
+
+        public Builder setEyesColour(String eyesColour){
+            studentToBuild.setEyesColour(eyesColour);
+            return this;
+        }
+
+        public Builder setSkinColour(String skinColour){
+            studentToBuild.setPatronymic(skinColour);
+            return this;
+        }
+
+        public Builder setHairColour(String hairColour){
+            studentToBuild.setHairColour(hairColour);
+            return this;
+        }
+
+        public Builder setEmail(String email){
+            studentToBuild.setEmail(email);
+            return this;
+        }
+
+        public Builder setPhoneNumber(String phoneNumber){
+            studentToBuild.setPhoneNumber(phoneNumber);
+            return this;
+        }
+
+
+
+
+        public Builder setUniversity(String university){
+            studentToBuild.setUniversity(university);
+            return this;
+        }
+
+        public Builder setFaculty(String faculty){
+            studentToBuild.setFaculty(faculty);
+            return this;
+        }
+
+        public Builder setChair(String chair){
+            studentToBuild.setChair(chair);
+            return this;
+        }
+
+        public Builder setSpeciality(String speciality){
+            studentToBuild.setSpeciality(speciality);
+            return this;
+        }
+
+        public Builder setGroup(String group){
+            studentToBuild.setGroup(group);
+            return this;
+        }
+
+        public Builder setCourse(String course){
+            studentToBuild.setCourse(course);
+            return this;
+        }
+
+        public Builder setId(int id){
+            studentToBuild.setId(id);
+            return this;
+        }
+
+        public Builder setYearOfEntering(int yearOfEntering){
+            studentToBuild.setYearOfEntering(yearOfEntering);
+            return this;
+        }
+
+        public Builder setClub(String club){
+            studentToBuild.setClub(club);
+            return this;
+        }
+        public Builder setSportSection(String sportSection){
+            studentToBuild.setSportSection(sportSection);
+            return this;
+        }
+        public Builder setAverageMark(double averageMark){
+            studentToBuild.setAverageMark(averageMark);
+            return this;
+        }
+        public Builder setLivesInDorm(boolean livesInDorm){
+            studentToBuild.setLivesInDorm(livesInDorm);
+            return this;
+        }
+        public Student build(){
+            return studentToBuild;
+        }
+    }
 }

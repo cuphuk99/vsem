@@ -23,6 +23,11 @@ public class Main {
         System.out.println(" ");
 
         ParallelogramNew p2 = new ParallelogramNew(9,7, 60);
+        IGeometry i0 = FigureFactory.create(3,4,45);
+        IGeometry i1 = FigureFactory.create(3,4);
+        System.out.println(i0);
+        System.out.println(i1);
+
         System.out.println(p2.toJSON());
         System.out.println(p2.toXML());
 
