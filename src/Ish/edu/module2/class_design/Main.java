@@ -51,9 +51,30 @@ public class Main {
                 .setLastName("Ishtukin")
                 .setPatronymic("Valeriyovich")
                 .setDateOfBirth(LocalDate.of(1999, Month.AUGUST, 26))
-
+                .setMale("Male")
+                .setWeight(71.5)
+                .setHeight(176.3)
+                .setNationality("Ukrainian")
+                .setEyesColour("Green")
+                .setSkinColour("White")
+                .setHairColour("Brown")
+                .setEmail("cuphuk99@gmail.com")
+                .setPhoneNumber("0501512613")
+                .setUniversity("KNUTE")
+                .setFaculty("FIT")
+                .setChair("Economic cybernetics")
+                .setSpeciality("Digital economy")
+                .setGroup("1m")
+                .setCourse("1")
+                .setId(546455)
+                .setYearOfEntering(2020)
+                .setClub("none")
+                .setSportSection("Badminton")
+                .setAverageMark(90.1)
+                .setLivesInDorm(true)
                 .build();
 
+        System.out.println(st2);
 
 
 
