@@ -172,6 +172,20 @@ public class Student extends Person{
     @Override
     public String toString() {
         return "Student{" +
+                "firstName='" + super.getFirstName() + '\'' +
+                ", lastName='" + super.getLastName() + '\'' +
+                ", patronymic='" + super.getPatronymic() + '\'' +
+                ", age=" + this.getAgeNew() +
+                ", male='" + super.getMale() + '\'' +
+                ", weight=" + super.getWeight() +
+                ", height=" + super.getHeight() +
+                ", nationality='" + super.getNationality() + '\'' +
+                ", eyesColour='" + super.getEyesColour() + '\'' +
+                ", skinColour='" + super.getSkinColour() + '\'' +
+                ", hairColour='" + super.getHairColour() + '\'' +
+                ", email='" + super.getEmail() + '\'' +
+                ", phoneNumber='" + super.getPhoneNumber() + '\'' +
+
                 "university='" + university + '\'' +
                 ", faculty='" + faculty + '\'' +
                 ", chair='" + chair + '\'' +

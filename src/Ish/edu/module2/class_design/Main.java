@@ -76,6 +76,9 @@ public class Main {
 
         System.out.println(st2);
 
+        Student st3 = new Student.Builder().setSimilarTo(st2).setFirstName("Galya").build();
+
+        System.out.println(st3);
 
 
     }
